@@ -38,7 +38,7 @@ It provides a structured framework for capturing the main components of an entit
 
 ## Content
 
-The current content of the Telos framework is a file called [corporate_telos0](corporate_telos.md), which is a Telos Context File (TCF) that contains the context for a fictional company called Alma.
+The current content of the Telos framework is a file called [`corporate_telos.md`](corporate_telos.md), which is a Telos Context File (TCF) that contains the context for a fictional company called Alma.
 
 The file is for the company's Information Security Program, and covers everything about the program, from its mission to its goals, strategies, tech stack, remediation metrics, etc.
 
