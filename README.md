@@ -19,13 +19,15 @@ Telos is an open-sourced framework for creating Deep Context about things that m
 <h4><code>Telos</code> An open-sourced framework for creating deep context about things that matter to humans.</h4>
 </p>
 
-[Purpose](#purpose) •
+[Purpose](#purpose) • [Content](#content) • [How to Contribute](#how-to-contribute)
+
 </div>
 </div>
 
 ## Navigation
 
 - [Purpose](#purpose)
+- [Content](#content)
 - [How to Contribute](#how-to-contribute)
 
 ## Purpose
@@ -33,6 +35,16 @@ Telos is an open-sourced framework for creating Deep Context about things that m
 The purpose of the Telos project is to help entities of any size—from individuals to planets—articulate what they are about and how they're pursuing their purpose in life.
 
 It provides a structured framework for capturing the main components of an entity, including its mission, goals, problems, strategies, KPIs, etc.
+
+## Content
+
+The current content of the Telos framework is a file called `corporate_telos.md`, which is a Telos Context File (TCF) that contains the context for a fictional company called Alma.
+
+The file is for the company's Information Security Program, and covers everything about the program, from its mission to its goals, strategies, tech stack, remediation metrics, etc.
+
+## How to Contribute
+
+The best way to contribute today is to add an Issue to the repo with your ideas, suggestions, or requests. And I can use that to update the file structure described in #Content.
 
 ### Primary contributors
 
