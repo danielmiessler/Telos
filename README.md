@@ -11,8 +11,8 @@ Telos is an open-sourced framework for creating Deep Context about things that m
 
 ![Static Badge](https://img.shields.io/badge/mission-articulate%20human%20context-brightgreen)
 <br />
-![GitHub top language](https://img.shields.io/github/languages/top/danielmiessler/telos)
-![GitHub last commit](https://img.shields.io/github/last-commit/human-substrate/Problems)
+![GitHub top language](https://img.shields.io/github/languages/top/danielmiessler/Telos)
+![GitHub last commit](https://img.shields.io/github/last-commit/danielmiessler/Telos)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <p class="align center">
