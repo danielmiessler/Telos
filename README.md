@@ -3,7 +3,10 @@ Telos is an open-sourced framework for creating Deep Context about things that m
 
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/40b32780-d077-4a8c-9f38-ddfc5acecc4c" width="400" height="400"/>
+![substrate-icon](https://github.com/user-attachments/assets/7ca8702e-534b-4a97-8ebd-a47a2537d3e7)
+
+
+<img src="https://github.com/user-attachments/assets/7ca8702e-534b-4a97-8ebd-a47a2537d3e7" width="400" height="400"/>
 
 
 
