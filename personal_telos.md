@@ -1,3 +1,5 @@
+# TELOS
+
 ## DOCUMENT PURPOSE
 
 This document captures the TELOS method of articulating a person's personal context so that they, and AI, can better understand them.
