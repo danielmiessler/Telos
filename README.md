@@ -5,8 +5,6 @@ Telos is an open-sourced framework for creating Deep Context about things that m
 
 <img src="https://github.com/user-attachments/assets/40b32780-d077-4a8c-9f38-ddfc5acecc4c" width="400" height="400"/>
 
-
-
 # `Telos`
 
 ![Static Badge](https://img.shields.io/badge/mission-articulate%20deep%20context%20about%20things%20that%20matter%20to%20humans-brightgreen)
