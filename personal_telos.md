@@ -10,13 +10,13 @@ Other sections that aren't those core sections are additional context to support
 
 ## HISTORY
 
-- I grew up in the San Francisco Bay Area
+- I grew up in the Austin, TX area
 - I went to Mission High School, where I was bullied a decent amount
 - High school is where I met my 2 life-long friends, Doug and Mitchell who are still my friends today
 
 ## PROBLEMS
 
-- Not enough people understand how to build secure open-source software
+- P1: Not enough people understand how to build secure open-source software
 
 ## MISSION
 
@@ -43,8 +43,8 @@ Other sections that aren't those core sections are additional context to support
 
 ## THINGS I'VE BEEN WRONG ABOUT
 
-- Didn't anticipate Bitcoin being a thing. Next time create the coins and store them just in case.
 - Thought AirBnB would shut down all the hotels. But they're doing fine.
+- I thought NVIDIA would have been crushed by Amazon by like 2021
 
 ## IDEAS
 
