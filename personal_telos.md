@@ -8,6 +8,8 @@ The conceptual path is Problems -> Mission -> (Narratives) -> Goals -> Challenge
 
 Other sections that aren't those core sections are additional context to support them.
 
+Source video: https://youtu.be/3BXE0e3QZ4U
+
 ## HISTORY
 
 - I grew up in the Austin, TX area
