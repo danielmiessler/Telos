@@ -40,6 +40,14 @@ The current content of the Telos framework is a file called [`corporate_telos.md
 
 The file is for the company's Information Security Program, and covers everything about the program, from its mission to its goals, strategies, tech stack, remediation metrics, etc.
 
+### Supporting Videos
+Source videos:
+https://youtu.be/3BXE0e3QZ4U
+https://youtu.be/popvxbg9Flc
+
+### Supporting Fabric Patterns
+See the t_xxxxx patterns in https://github.com/rustyhaley/fabric/blob/main/data/patterns/t_extract_panel_topics/system.md
+
 ## How to Contribute
 
 The best way to contribute today is to add an Issue to the repo with your ideas, suggestions, or requests. And I can use that to update the file structure described in #Content.
