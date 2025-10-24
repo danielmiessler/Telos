@@ -1,4 +1,5 @@
 # Telos
+
 Telos is an open-sourced framework for creating Deep Context about things that matter to humans.
 
 <div align="center">
@@ -36,17 +37,25 @@ It provides a structured framework for capturing the main components of an entit
 
 ## Content
 
+### Corporate Context
+
 The current content of the Telos framework is a file called [`corporate_telos.md`](corporate_telos.md), which is a Telos Context File (TCF) that contains the context for a fictional company called Alma.
 
 The file is for the company's Information Security Program, and covers everything about the program, from its mission to its goals, strategies, tech stack, remediation metrics, etc.
 
+### Personal Context
+
+I believe one of the biggest problems in the world is _____, which is why I am building/creating this _____.
+
 ### Supporting Videos
+
 Source videos:
 https://youtu.be/3BXE0e3QZ4U
 https://youtu.be/popvxbg9Flc
 
 ### Supporting Fabric Patterns
-See the t_xxxxx patterns in https://github.com/rustyhaley/fabric/blob/main/data/patterns/t_extract_panel_topics/system.md
+
+See the t_xxxxx patterns in https://github.com/rustyhaley/fabric/blob/main/data/patterns/t_*/system.md
 
 ## How to Contribute
 
@@ -55,6 +64,10 @@ The best way to contribute today is to add an Issue to the repo with your ideas,
 ### Primary contributors
 
 `Telos` was created by <a href="https://danielmiessler.com/subscribe" target="_blank">Daniel Miessler</a> in October of 2024.
+
+How My Projects Fit Together: How Substrate, Fabric, TELOS, and Daemon fit into Human 3.0
+https://danielmiessler.com/blog/how-my-projects-fit-together
+
 <br /><br />
 <a href="https://twitter.com/intent/user?screen_name=danielmiessler">![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/danielmiessler)</a>
 
