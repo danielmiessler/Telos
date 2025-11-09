@@ -50,3 +50,7 @@ The best way to contribute today is to add an Issue to the repo with your ideas,
 <br /><br />
 <a href="https://twitter.com/intent/user?screen_name=danielmiessler">![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/danielmiessler)</a>
 
+## License
+
+MIT License - see the [LICENSE](LICENSE) file for details.
+
