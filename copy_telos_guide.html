@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELOS Guided Experience - Copy Prompt</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .copy-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .copy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .copy-button:active {
+            transform: translateY(0);
+        }
+        
+        .copy-button.success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .status-message.show {
+            opacity: 1;
+        }
+        
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .char-count {
+            text-align: right;
+            color: #999;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 TELOS Guided Experience</h1>
+        <p class="subtitle">Copy the complete AI prompt to your clipboard</p>
+        
+        <div class="info-box">
+            <p><strong>What this does:</strong></p>
+            <p>Clicking the button below will copy the entire TELOS Guided Experience prompt to your clipboard. You can then paste it into any AI chat interface to start your guided TELOS journey.</p>
+            <p><strong>Note:</strong> This page loads content from <code>Telos_Guided_Experience.txt</code>. For best results:</p>
+            <ul style="margin: 5px 0 0 20px; font-size: 14px;">
+                <li>Keep both files in the same folder</li>
+                <li>If opening locally, you may need to run a simple web server (see below)</li>
+                <li>Works great on any internal company web server</li>
+            </ul>
+        </div>
+        
+        <button class="copy-button" id="copyButton" onclick="copyToClipboard()">
+            📋 Copy TELOS Guide to Clipboard
+        </button>
+        
+        <div class="status-message" id="statusMessage"></div>
+        
+        <div class="char-count">Loading content...</div>
+        
+        <details style="margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+            <summary style="cursor: pointer; font-weight: 600; color: #555;">📚 Troubleshooting: If the button doesn't work...</summary>
+            <div style="margin-top: 15px; color: #666; font-size: 14px; line-height: 1.6;">
+                <p>Some browsers block loading local files for security. If you see an error, run a simple local web server:</p>
+                
+                <p><strong>Option 1 - Python (easiest):</strong></p>
+                <pre style="background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto;">cd /path/to/Telos/folder
+python3 -m http.server 8000</pre>
+                <p>Then open: <code>http://localhost:8000/copy_telos_guide.html</code></p>
+                
+                <p><strong>Option 2 - Node.js:</strong></p>
+                <pre style="background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto;">npx http-server -p 8000</pre>
+                
+                <p><strong>Option 3 - Company web server:</strong></p>
+                <p>Upload both files to your internal web server (where you mentioned you've seen similar pages).</p>
+            </div>
+        </details>
+    </div>
+
+    <script>
+        // Global variable to store the loaded text
+        let telosText = '';
+        let isTextLoaded = false;
+
+        // Load the TELOS text from external file
+        async function loadTelosText() {
+            try {
+                const response = await fetch('Telos_Guided_Experience.txt');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                telosText = await response.text();
+                isTextLoaded = true;
+                updateButtonState(true);
+                updateCharCount();
+                return true;
+            } catch (error) {
+                console.error('Error loading TELOS text:', error);
+                updateButtonState(false, error.message);
+                return false;
+            }
+        }
+
+        // Update character count display
+        function updateCharCount() {
+            const charCountElement = document.querySelector('.char-count');
+            if (charCountElement && telosText) {
+                const charCount = telosText.length.toLocaleString();
+                charCountElement.textContent = `Prompt length: ${charCount} characters`;
+            }
+        }
+
+        // Update button and status based on load state
+        function updateButtonState(loaded, errorMsg = '') {
+            const button = document.getElementById('copyButton');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            if (loaded) {
+                button.disabled = false;
+                button.style.opacity = '1';
+                button.style.cursor = 'pointer';
+            } else {
+                button.disabled = true;
+                button.style.opacity = '0.5';
+                button.style.cursor = 'not-allowed';
+                
+                if (errorMsg) {
+                    statusMessage.textContent = `Unable to load content: ${errorMsg}. See instructions below.`;
+                    statusMessage.className = 'status-message error show';
+                }
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateButtonState(false);
+            loadTelosText();
+        });
+
+        function copyToClipboard() {
+            if (!isTextLoaded) {
+                alert('Content is still loading. Please wait a moment and try again.');
+                return;
+            }
+            const button = document.getElementById('copyButton');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Use the modern Clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(telosText)
+                    .then(() => {
+                        showSuccess(button, statusMessage);
+                    })
+                    .catch(err => {
+                        console.error('Clipboard API failed:', err);
+                        // Fallback to legacy method
+                        fallbackCopy();
+                    });
+            } else {
+                // Fallback for older browsers
+                fallbackCopy();
+            }
+        }
+
+        function fallbackCopy() {
+            const button = document.getElementById('copyButton');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Create a temporary textarea
+            const textarea = document.createElement('textarea');
+            textarea.value = telosText;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            
+            try {
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showSuccess(button, statusMessage);
+            } catch (err) {
+                document.body.removeChild(textarea);
+                showError(button, statusMessage, 'Copy failed. Please try selecting and copying manually.');
+            }
+        }
+
+        function showSuccess(button, statusMessage) {
+            button.textContent = '✅ Copied Successfully!';
+            button.classList.add('success');
+            
+            statusMessage.textContent = 'The TELOS guide is now in your clipboard. Paste it into any AI chat!';
+            statusMessage.className = 'status-message success show';
+            
+            setTimeout(() => {
+                button.textContent = '📋 Copy TELOS Guide to Clipboard';
+                button.classList.remove('success');
+                statusMessage.classList.remove('show');
+            }, 3000);
+        }
+
+        function showError(button, statusMessage, message) {
+            statusMessage.textContent = message;
+            statusMessage.className = 'status-message error show';
+            
+            setTimeout(() => {
+                statusMessage.classList.remove('show');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
