@@ -50,6 +50,16 @@ The best way to contribute today is to add an Issue to the repo with your ideas,
 <br /><br />
 <a href="https://twitter.com/intent/user?screen_name=danielmiessler">![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/danielmiessler)</a>
 
+## 💜 Support This Project
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Sponsor-❤️-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor">
+
+**I spend hundreds of hours a year on open source. If you'd like to help support this project, you can sponsor me [here](https://github.com/sponsors/danielmiessler). 🙏🏼**
+
+</div>
+
 ## License
 
 MIT License - see the [LICENSE](LICENSE) file for details.
